@@ -1,4 +1,4 @@
-# Basic function with minimal dependencies (Java)
+# MHB's futile attempt at a blockchain lambda
 
 ![Architecture](/sample-apps/java-basic/images/sample-java-basic.png)
 
@@ -21,8 +21,8 @@ Use the following instructions to deploy the sample application.
 # Setup
 Download or clone this repository.
 
-    $ git clone https://github.com/awsdocs/aws-lambda-developer-guide.git
-    $ cd aws-lambda-developer-guide/sample-apps/java17-examples
+    $ git clone https://github.com/benveniste/blockchainLambda
+    $ cd aws-lambda-developer-guide/sample-apps/blockchainLambda
 
 To create a new bucket for deployment artifacts, run `1-create-bucket.sh`.
 

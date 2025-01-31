@@ -10,8 +10,12 @@ repositories {
 dependencies {
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
     implementation 'org.slf4j:slf4j-nop:2.0.6'
-    implementation 'com.amazonaws:aws-java-sdk-secretsmanager:1.12.780'
+    implementation 'software.amazon.awssdk:secretsmanager:2.29.1'
     implementation 'org.hyperledger.fabric-sdk-java:fabric-sdk-java:2.2.6'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.18.2'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.18.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }

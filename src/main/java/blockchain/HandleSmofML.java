@@ -2,6 +2,7 @@ package blockchain;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
+import org.hyperledger.fabric_ca.sdk.HFCAClient;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -16,7 +17,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
 
-public class HandleSmofML  implements RequestHandler<SmofML, String> {
+public class HandleSmofML implements RequestHandler<SmofML, String> {
     @Override
     public String handleRequest(SmofML wrapper, Context context) {
         try {
@@ -32,8 +33,10 @@ public class HandleSmofML  implements RequestHandler<SmofML, String> {
 
             Writer out = new StringWriter();
             transformer.transform(new DOMSource(document), new StreamResult(out));
-            return out.toString();
-        } catch (IOException | ParserConfigurationException | TransformerException | SAXException oops) {
+            HFCAClient fabricClient = new FabricClient().getClient(context.getLogger());
+            return "Got here!";
+        } catch (IOException | ParserConfigurationException | TransformerException | SAXException |
+                 RuntimeException oops) {
             return oops.getMessage();
         }
     }
