@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eo pipefail
-FUNCTION=$(aws cloudformation describe-stack-resource --stack-name java17-examples --logical-resource-id function2 --query 'StackResourceDetail.PhysicalResourceId' --output text)
+FUNCTION=$(aws cloudformation describe-stack-resource --stack-name blockchainLambda --logical-resource-id function2 --query 'StackResourceDetail.PhysicalResourceId' --output text)
 while true; do
   aws lambda invoke \
       --function-name $FUNCTION \

@@ -14,4 +14,4 @@ else
 fi
 echo $TEMPLATE
 aws cloudformation package --template-file $TEMPLATE --s3-bucket $ARTIFACT_BUCKET --output-template-file out.yml
-aws cloudformation deploy --template-file out.yml --stack-name java17-examples --capabilities CAPABILITY_NAMED_IAM
+aws cloudformation deploy --template-file out.yml --stack-name blockchainLambda --capabilities CAPABILITY_NAMED_IAM

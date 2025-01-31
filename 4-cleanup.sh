@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eo pipefail
-STACK=java17-examples
+STACK=blockchainLambda
 if [[ $# -eq 1 ]] ; then
     STACK=$1
     echo "Deleting stack $STACK"

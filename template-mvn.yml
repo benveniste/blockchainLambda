@@ -5,7 +5,7 @@ Resources:
   function:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: target/java17-examples-1.0-SNAPSHOT.jar
+      CodeUri: target/blockchainLambda-1.0-SNAPSHOT.jar
       Handler: example.HandlerIntegerJava17
       Runtime: java17
       Description: Java function
@@ -22,7 +22,7 @@ Resources:
   function2:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: build/distributions/java17-examples.zip
+      CodeUri: build/distributions/blockchainLambda.zip
       Handler: blockchain.HandleSmofML
       Runtime: java17
       Description: Java function
@@ -34,4 +34,7 @@ Resources:
         - AWSLambda_ReadOnlyAccess
         - AWSXrayWriteOnlyAccess
         - AWSLambdaVPCAccessExecutionRole
+        - SecretsManagerReadWrite
+        - AmazonManagedBlockchainConsoleFullAccess
+        - AmazonManagedBlockchainFullAccess
       Tracing: Active
