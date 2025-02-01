@@ -23,7 +23,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: build/distributions/blockchainLambda.zip
-      Handler: blockchain.HandleSmofML
+      Handler: com.smofs.handlers.HandleSmofML
       Runtime: java17
       Description: Java function
       MemorySize: 2048

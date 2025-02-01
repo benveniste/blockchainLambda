@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '2.1.0'
 }
 
 repositories {
@@ -11,7 +10,8 @@ dependencies {
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
     implementation 'org.slf4j:slf4j-nop:2.0.6'
     implementation 'software.amazon.awssdk:secretsmanager:2.29.1'
-    implementation 'org.hyperledger.fabric-sdk-java:fabric-sdk-java:2.2.6'
+    implementation 'org.hyperledger.fabric-sdk-java:fabric-sdk-java:1.4.7'
+    implementation 'io.netty:netty-tcnative-boringssl-static:2.0.69.Final:linux-x86_64'
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.18.2'
     implementation 'com.fasterxml.jackson.core:jackson-core:2.18.2'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
@@ -36,6 +36,3 @@ java {
 }
 
 build.dependsOn buildZip
-kotlin {
-    jvmToolchain(17)
-}

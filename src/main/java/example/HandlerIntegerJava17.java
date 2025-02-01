@@ -5,6 +5,7 @@ import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 // Handler value: example.HandlerInteger
+@SuppressWarnings("unused")
 public class HandlerIntegerJava17 implements RequestHandler<IntegerRecord, Integer>{
 
   @Override
